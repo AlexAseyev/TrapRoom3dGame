@@ -15,9 +15,11 @@ public class TrapDoorOpenScript : MonoBehaviour
     void OnTriggerEnter()
     {
         m_bDoorOpenActivateFlag = true;
-        StartCoroutine("LiftMove");
+        doorObj.GetComponent<Animation>().Play("TrapDoorDownAnim");
     }
 
+    //StartCoroutine("LiftMove");
+    /*
     IEnumerator LiftMove()
     {
         for(;;)
@@ -30,5 +32,5 @@ public class TrapDoorOpenScript : MonoBehaviour
                 // TODO stop platform
             }
         }
-    }
+    }*/
 }
