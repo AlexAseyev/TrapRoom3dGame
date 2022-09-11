@@ -4,15 +4,13 @@ using UnityEngine;
 
 public class RedButtonClickOnDownRoom : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject buttonObj;
+    public GameObject doorObj;
+    [SerializeField]
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter()
     {
-        
+        //buttonObj.GetComponent<Animation>().Play("ButtonDownAnim");
+        doorObj.GetComponent<Animation>().Play("TrapDoorUpAnim");
     }
 }

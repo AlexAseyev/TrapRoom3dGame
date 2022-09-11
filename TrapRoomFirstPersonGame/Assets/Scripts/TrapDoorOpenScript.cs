@@ -7,14 +7,14 @@ public class TrapDoorOpenScript : MonoBehaviour
     public GameObject doorObj;
     [SerializeField]
 
-    public bool m_bDoorOpenActivateFlag = false;
+    //public bool m_bDoorOpenActivateFlag = false;
 
-    private const float m_fWaitLiftTime = 0.0001f;
-    private const float m_fBoostSpeedMove = 5.0f;
+    //private const float m_fWaitLiftTime = 0.0001f;
+    //private const float m_fBoostSpeedMove = 5.0f;
 
     void OnTriggerEnter()
     {
-        m_bDoorOpenActivateFlag = true;
+        //m_bDoorOpenActivateFlag = true;
         doorObj.GetComponent<Animation>().Play("TrapDoorDownAnim");
     }
 
