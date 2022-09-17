@@ -143,7 +143,7 @@ GameObject:
   - component: {fileID: 6929814299642224804}
   - component: {fileID: 8888579422535823119}
   - component: {fileID: 6859220520374794760}
-  - component: {fileID: 7709409215632346336}
+  - component: {fileID: 3151226122022858191}
   m_Layer: 0
   m_Name: ButtonCylinder
   m_TagString: Untagged
@@ -230,20 +230,22 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &7709409215632346336
-MonoBehaviour:
+--- !u!111 &3151226122022858191
+Animation:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7420811624537591438}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4c0e1f27ab8394151a2f880d9ab46add, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  buttonObj: {fileID: 7420811624537591438}
-  doorObj: {fileID: 0}
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 6230cdcb9a8c4430ca4cc41d90c3fe09, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 32c7de4eb5ffd4657971b3afb0ad96a6, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &8672300480044675165
 GameObject:
   m_ObjectHideFlags: 0
@@ -356,3 +358,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   buttonObj: {fileID: 7420811624537591438}
   doorObj: {fileID: 0}
+  trapDoorTriger: {fileID: 0}

@@ -10,9 +10,6 @@ public class TrapRespawnDownRoom : MonoBehaviour
 
     void OnTriggerEnter()
     {
-        print("respawn");
-
-        Vector3 pos = m_RespawnPoint.transform.position;
-        m_Player.transform.position = new Vector3(pos.x, pos.y, pos.z);
+        m_Player.transform.position = m_RespawnPoint.transform.position;
     }
 }
