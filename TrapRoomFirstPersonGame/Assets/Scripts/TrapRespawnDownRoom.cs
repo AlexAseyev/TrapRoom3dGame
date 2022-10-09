@@ -4,9 +4,8 @@ using UnityEngine;
 
 public class TrapRespawnDownRoom : MonoBehaviour
 {
-    public GameObject m_RespawnPoint;
-    public GameObject m_Player;
-    [SerializeField]
+    [SerializeField] public GameObject m_RespawnPoint;
+    [SerializeField] public GameObject m_Player;
 
     void OnTriggerEnter()
     {

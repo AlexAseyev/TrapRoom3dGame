@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class RedButtonClickOnDownRoom : MonoBehaviour
 {
-    public GameObject buttonObj;
-    public GameObject doorObj;
+    [SerializeField] public GameObject buttonObj;
+    [SerializeField]  public GameObject doorObj;
 
-    public GameObject trapDoorTriger;
-    public GameObject respawnPoint;
-    [SerializeField]
+    [SerializeField] public GameObject trapDoorTriger;
+    [SerializeField] public GameObject respawnPoint;
 
     void OnTriggerEnter()
     {
@@ -17,7 +16,5 @@ public class RedButtonClickOnDownRoom : MonoBehaviour
         doorObj.GetComponent<Animation>().Play("TrapDoorUpAnim"); // lift up anim
 
         respawnPoint.transform.position = transform.position; // move respawn point
-
-        Destroy(trapDoorTriger); // remove
     }
 }

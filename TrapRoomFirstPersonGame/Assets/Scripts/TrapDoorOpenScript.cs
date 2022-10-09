@@ -4,15 +4,26 @@ using UnityEngine;
 
 public class TrapDoorOpenScript : MonoBehaviour
 {
-    public GameObject doorObj;
+    [SerializeField] public GameObject doorObj;
 
     public bool b_onAnimationTrapsDownRoomOn = false;
-    [SerializeField]
 
     void OnTriggerEnter()
     {
-        doorObj.GetComponent<Animation>().Play("TrapDoorDownAnim");
+        Animation liftAnim = doorObj.GetComponent<Animation>();
 
-        b_onAnimationTrapsDownRoomOn = true;
+        if (!b_onAnimationTrapsDownRoomOn)
+        {
+            liftAnim.Play("TrapDoorDownAnim");
+            b_onAnimationTrapsDownRoomOn = true;
+        }
+        else
+        {
+            liftAnim.Stop();
+
+            // destroy down room
+            GameObject ObjDownRoom = GameObject.Find("DownRoom");
+            Destroy(ObjDownRoom);
+        }
     }
 }

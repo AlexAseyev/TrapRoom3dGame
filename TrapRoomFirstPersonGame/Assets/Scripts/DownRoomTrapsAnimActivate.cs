@@ -14,7 +14,7 @@ public class DownRoomTrapsAnimActivate : MonoBehaviour
 {
     private void Update()
     {
-        //if ()
+        //if (TrapDoorOpenScript.b_onAnimationTrapsDownRoomOn)
         {
             CDownRoomTrap trap = new CDownRoomTrap();
             trap.AnimationTrapActivate(gameObject);
